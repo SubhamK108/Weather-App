@@ -30,9 +30,9 @@ const UpdateWeather = async (lat, long) => {
     // Set DOM elements
     errorClass.remove();
     weatherLocation.textContent = `${cityJSON.EnglishName}, ${cityJSON.AdministrativeArea.EnglishName}`;
-    temperatureDegree.textContent = Math.round(weatherJSON.Temperature.Value);
+    temperatureDegree.textContent = Math.round(weatherJSON.Temperature.Metric.Value);
     temperatureUnit.textContent = 'C/F';
-    temperatureDescription.textContent = weatherJSON.IconPhrase;
+    temperatureDescription.textContent = weatherJSON.WeatherText;
 
 }
 
@@ -41,7 +41,7 @@ const UpdateWeather = async (lat, long) => {
 const GetWeatherDetails = async (cityID) => {
 
     const API = 'nFdifWPGNygNkbT2IjDlZBduiVkAG4Gg';
-    const weatherURL = `https://dataservice.accuweather.com/forecasts/v1/hourly/1hour/${cityID}?apikey=${API}&metric=true`;
+    const weatherURL = `https://dataservice.accuweather.com/currentconditions/v1/${cityID}?apikey=${API}`;
     const weather = await fetch(weatherURL);
     const weatherJSON = await weather.json();
     return weatherJSON[0];
