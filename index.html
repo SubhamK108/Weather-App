@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SK Weather</title>
+    <meta name="description" content="Check current weather of your location.">
+    <link rel="shortcut icon" href="../favicon.ico"><!-- 
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest"> -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    <link rel="stylesheet" href="Assets/css/style.css" />
+    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+</head>
+
+<body>
+
+    <div class="location">
+        <h1 class="locationName"></h1>
+    </div>
+
+
+    <div>
+        <canvas class="weatherIcon" width="256" height="256">Icon</canvas>
+    </div>
+
+    <h1 class="error" style="text-align: center; margin-top: -10em;">Please turn on your device's location services and refresh</h1>
+
+    <div class="temperature">
+
+        <div class="tempDegreeSection", title="Change Unit">
+            <h2 class="tempDegree"></h2>
+            <span class="tempUnit"></span>
+        </div>
+
+        <div class="tempDescriptionSection">
+            <h3 class="tempDescription"></h3>
+        </div>
+
+    </div>
+
+</body>
+
+<!-- Scripts -->
+<script src="Assets/js/index.js"></script>
+<script src="Assets/js/skycons.js"></script>
+<script src="Assets/js/icon-parser.js"></script>
+
+</html>
