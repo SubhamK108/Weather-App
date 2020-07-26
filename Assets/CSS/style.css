@@ -10,9 +10,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #1488cc;
-    background: -webkit-linear-gradient(to right, #1488cc, #2b32b2);
-    background: linear-gradient(to right, #1488cc, #2b32b2);
+    background: #56ccf2;
+    background: -webkit-linear-gradient(to right, #56ccf2, #2f80ed);
+    background: linear-gradient(to right, #56ccf2, #2f80ed);
     color: rgb(44, 44, 44);
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -34,7 +34,6 @@ body {
 
     @media screen and (max-width: 736px) {
         .location {
-            /* margin-top: -6em; */
             font-size: 15px;
         }
     }
@@ -60,7 +59,7 @@ body {
 
     @media screen and (max-width: 736px) {
         .tempDegreeSection span {
-            font-size: 30px;
+            font-size: 32px;
         }
 
         .tempDegreeSection h2 {
