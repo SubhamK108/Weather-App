@@ -1,7 +1,7 @@
 
 
 // Function to update weather
-const UpdateWeather = async (lat, long, temperatureIcon) => {
+const UpdateWeather = async (lat, long) => {
 
     var temperatureDescription = document.querySelector(".tempDescription");
     var temperatureDegree = document.querySelector(".tempDegree");
@@ -24,7 +24,7 @@ const UpdateWeather = async (lat, long, temperatureIcon) => {
     // Update weather icon
     SetIcon(iconID);
 
-    console.log(cityJSON);
+    // console.log(cityJSON);
     // console.log(weatherJSON);
 
     // Set DOM elements
@@ -49,7 +49,7 @@ const GetWeatherDetails = async (cityID) => {
 
 
 // Function to get the weather icon
-function SetIcon(iconID) {
+const SetIcon = async (iconID) => {
 
     var temperatureIcon = document.querySelector(".weatherIcon");
     const skycons = new Skycons({"monochrome": false});
