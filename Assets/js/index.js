@@ -7,6 +7,7 @@ const UpdateWeather = async (lat, long, temperatureIcon) => {
     var temperatureDegree = document.querySelector(".tempDegree");
     var temperatureUnit = document.querySelector(".tempUnit");
     var weatherLocation = document.querySelector(".locationName");
+    var errorClass = document.querySelector(".error");
 
     const API = 'mCWChbcG7iVBKGCBekQ8LvG1OXYCVKHB';
     const cityAPI = `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API}&q=${lat},${long}`;
@@ -27,10 +28,11 @@ const UpdateWeather = async (lat, long, temperatureIcon) => {
     // console.log(weatherJSON);
 
     // Set DOM elements
+    errorClass.remove();
     weatherLocation.textContent = `${cityJSON.EnglishName}, ${cityJSON.AdministrativeArea.EnglishName}`;
     temperatureDegree.textContent = Math.round(weatherJSON.Temperature.Value);
-    temperatureDescription.textContent = weatherJSON.IconPhrase;
     temperatureUnit.textContent = 'C/F';
+    temperatureDescription.textContent = weatherJSON.IconPhrase;
 
 }
 
@@ -60,14 +62,11 @@ function SetIcon(iconID) {
 
 window.addEventListener("load", () => {
 
-    var errorClass = document.querySelector(".error");
     var temperatureDegree = document.querySelector(".tempDegree");
     var temperatureSection = document.querySelector(".tempDegreeSection");
     var temperatureUnit = document.querySelector(".tempUnit");
     
     if (navigator.geolocation) {
-        
-        errorClass.remove();
 
         navigator.geolocation.getCurrentPosition(position => {
             var long = position.coords.longitude;
