@@ -31,7 +31,7 @@ const UpdateWeather = async (lat, long) => {
     errorClass.remove();
     weatherLocation.textContent = `${cityJSON.EnglishName}, ${cityJSON.AdministrativeArea.EnglishName}`;
     temperatureDegree.textContent = Math.round(weatherJSON.Temperature.Metric.Value);
-    temperatureUnit.textContent = 'C/F';
+    temperatureUnit.textContent = '°C/F';
     temperatureDescription.textContent = weatherJSON.WeatherText;
 
 }
@@ -61,8 +61,8 @@ const SetIcon = async (iconID) => {
 
 window.addEventListener("load", () => {
 
-    var temperatureDegree = document.querySelector(".tempDegree");
     var temperatureSection = document.querySelector(".tempDegreeSection");
+    var temperatureDegree = document.querySelector(".tempDegree");
     var temperatureUnit = document.querySelector(".tempUnit");
     
     if (navigator.geolocation) {
@@ -77,19 +77,19 @@ window.addEventListener("load", () => {
             // Change temperature units
             temperatureSection.addEventListener('click', () => {
 
-                if (temperatureUnit.textContent === 'C/F') {
+                if (temperatureUnit.textContent === '°C/F') {
 
                     let C = temperatureDegree.textContent;
                     let F = Math.round(((9 / 5) *  C) + 32);
                     temperatureDegree.textContent = F;
-                    temperatureUnit.textContent = 'F/C';
+                    temperatureUnit.textContent = '°F/C';
 
                 } else {
 
                     let F = temperatureDegree.textContent;
                     let C = Math.round(((F - 32) / 9) * 5);
                     temperatureDegree.textContent = C;
-                    temperatureUnit.textContent = 'C/F';
+                    temperatureUnit.textContent = '°C/F';
 
                 }
             })
