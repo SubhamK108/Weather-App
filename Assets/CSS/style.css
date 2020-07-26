@@ -34,7 +34,7 @@ body {
 
     @media screen and (max-width: 736px) {
         .location {
-            margin-top: -3em;
+            margin-top: -4em;
             font-size: 15px;
         }
     }
@@ -83,13 +83,6 @@ body {
     margin-bottom: 2em;
     margin-top: -2.5em;
 }
-/* 
-    @media screen and (max-width: 736px) {
-        .weatherIcon canvas {
-            width: 780;
-            height: 180;
-        }
-    } */
 
 .add-button {
     position: absolute;
