@@ -24,7 +24,7 @@ const UpdateWeather = async (lat, long) => {
     // Update weather icon
     SetIcon(iconID);
 
-    console.log(cityJSON);
+    // console.log(cityJSON);
     // console.log(weatherJSON);
 
     // Set DOM elements
