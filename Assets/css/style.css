@@ -10,9 +10,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #2b32b2;
-    background: -webkit-linear-gradient(to bottom, #2b32b2, #1488cc);
-    background: linear-gradient(to bottom, #2b32b2, #1488cc);
+    background: #1488cc;
+    background: -webkit-linear-gradient(to right, #1488cc, #2b32b2);
+    background: linear-gradient(to right, #1488cc, #2b32b2);
     color: rgb(44, 44, 44);
     font-family: Arial, Helvetica, sans-serif;
 }
