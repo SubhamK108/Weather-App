@@ -60,12 +60,12 @@ body {
 
     @media screen and (max-width: 736px) {
         .tempDegreeSection span {
-            font-size: 32px;
+            font-size: 34px;
             padding-left: 0;
         }
 
         .tempDegreeSection h2 {
-            font-size: 38px;
+            font-size: 40px;
         }
     }
 
@@ -76,7 +76,7 @@ body {
 
     @media screen and (max-width: 736px) {
         .tempDescriptionSection {
-            font-size: 20px;
+            font-size: 22px;
         }
     }
 
