@@ -32,6 +32,12 @@ body {
     font-size: 20px;
 }
 
+    @media screen and (max-width: 736px) {
+        .location {
+            margin-top: -1em;
+        }
+    }
+
 .temperature {
     flex-direction: column;
 }
