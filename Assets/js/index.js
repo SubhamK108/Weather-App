@@ -9,8 +9,8 @@ const UpdateWeather = async (lat, long, temperatureIcon) => {
     var weatherLocation = document.querySelector(".locationName");
     var errorClass = document.querySelector(".error");
 
-    const API = 'mCWChbcG7iVBKGCBekQ8LvG1OXYCVKHB';
-    const cityAPI = `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API}&q=${lat},${long}`;
+    const API = 'jKeGVcQ6dIAACKY7IHnLTnbI3Jb6Jz3P';
+    const cityAPI = `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API}&q=${lat},${long}&toplevel=false`;
 
     // Get city data
     const city = await fetch(cityAPI);
@@ -24,7 +24,7 @@ const UpdateWeather = async (lat, long, temperatureIcon) => {
     // Update weather icon
     SetIcon(iconID);
 
-    // console.log(cityJSON);
+    console.log(cityJSON);
     // console.log(weatherJSON);
 
     // Set DOM elements
@@ -40,7 +40,7 @@ const UpdateWeather = async (lat, long, temperatureIcon) => {
 // Function to get the weather details (JSON)
 const GetWeatherDetails = async (cityID) => {
 
-    const API = 'mCWChbcG7iVBKGCBekQ8LvG1OXYCVKHB';
+    const API = 'jKeGVcQ6dIAACKY7IHnLTnbI3Jb6Jz3P';
     const weatherAPI = `https://dataservice.accuweather.com/forecasts/v1/hourly/1hour/${cityID}?apikey=${API}&metric=true`;
     const weather = await fetch(weatherAPI);
     const weatherJSON = await weather.json();
