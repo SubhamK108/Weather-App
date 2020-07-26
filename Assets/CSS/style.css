@@ -34,7 +34,8 @@ body {
 
     @media screen and (max-width: 736px) {
         .location {
-            margin-top: -1em;
+            margin-top: -3em;
+            font-size: 15px;
         }
     }
 
@@ -57,15 +58,38 @@ body {
         font-size: 55px;
     }
 
+    @media screen and (max-width: 736px) {
+        .tempDegreeSection span {
+            font-size: 25;
+        }
+
+        .tempDegreeSection h2 {
+            font-size: 40px;
+        }
+    }
+
 .tempDescriptionSection {
     font-size: 30px;
     margin-top: -2em;
 }
 
+    @media screen and (max-width: 736px) {
+        .tempDescriptionSection {
+            font-size: 20px;
+        }
+    }
+
 .weatherIcon {
     margin-bottom: 2em;
     margin-top: -2.5em;
 }
+/* 
+    @media screen and (max-width: 736px) {
+        .weatherIcon canvas {
+            width: 780;
+            height: 180;
+        }
+    } */
 
 .add-button {
     position: absolute;
