@@ -34,7 +34,7 @@ body {
 
     @media screen and (max-width: 736px) {
         .location {
-            margin-top: -4em;
+            /* margin-top: -6em; */
             font-size: 15px;
         }
     }
@@ -60,11 +60,11 @@ body {
 
     @media screen and (max-width: 736px) {
         .tempDegreeSection span {
-            font-size: 25;
+            font-size: 30px;
         }
 
         .tempDegreeSection h2 {
-            font-size: 40px;
+            font-size: 38px;
         }
     }
 
