@@ -60,3 +60,9 @@ body {
     margin-bottom: 2em;
     margin-top: -2.5em;
 }
+
+.add-button {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
