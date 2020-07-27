@@ -12,14 +12,26 @@ const UpdateWeather = async (lat, long) => {
     const API = 'Fs28Hm60apgMBe0wJMTPi7eFvg1jTeMH';
     const cityURL = `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API}&q=${lat},${long}&toplevel=false`;
 
-    // Get city data
-    const city = await fetch(cityURL);
-    const cityJSON = await city.json();
-    var cityID = cityJSON.Key;
+    errorClass.textContent = 'Fetching weather data';
 
-    // Get weather data
-    const weatherJSON = await GetWeatherDetails(cityID);
-    var iconID = weatherJSON.WeatherIcon;
+    try {
+
+        // Get city data
+        const city = await fetch(cityURL);
+        const cityJSON = await city.json();
+        var cityID = cityJSON.Key;
+
+        // Get weather data
+        const weatherJSON = await GetWeatherDetails(cityID);
+        var iconID = weatherJSON.WeatherIcon;
+
+        errorClass.remove();
+
+    } catch (error) {
+        
+        errorClass.textContent = 'The daily limit of API Calls has been exhausted. Please wait till Subham renews the API';
+
+    }
 
     // Update weather icon
     SetIcon(iconID);
@@ -28,7 +40,6 @@ const UpdateWeather = async (lat, long) => {
     // console.log(weatherJSON);
 
     // Set DOM elements
-    errorClass.remove();
     weatherLocation.textContent = `${cityJSON.EnglishName}, ${cityJSON.AdministrativeArea.EnglishName}`;
     temperatureDegree.textContent = Math.round(weatherJSON.Temperature.Metric.Value);
     temperatureUnit.textContent = '°C/F';
