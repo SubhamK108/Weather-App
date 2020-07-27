@@ -32,6 +32,12 @@ body {
     font-size: 20px;
 }
 
+    @media screen and (max-height: 736px) {
+        .location {
+            margin-top: calc(-8%);
+        }
+    }
+
     @media screen and (max-width: 736px) {
         .location {
             font-size: 15px;
