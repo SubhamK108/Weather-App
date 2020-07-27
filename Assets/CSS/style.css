@@ -28,19 +28,14 @@ body {
 }
 
 .location {
-    margin-top: -6em;
+    margin-top: -120px;
     font-size: 20px;
 }
-
-    @media screen and (max-height: 736px) {
-        .location {
-            margin-top: calc(-8%);
-        }
-    }
 
     @media screen and (max-width: 736px) {
         .location {
             font-size: 15px;
+            /* margin-top: -224px; */
         }
     }
 
@@ -75,7 +70,7 @@ body {
 
 .tempDescriptionSection {
     font-size: 30px;
-    margin-top: -2em;
+    margin-top: -60px;
 }
 
     @media screen and (max-width: 736px) {
@@ -85,8 +80,8 @@ body {
     }
 
 .weatherIcon {
-    margin-bottom: 2em;
-    margin-top: -2.5em;
+    margin-bottom: 32px;
+    margin-top: -40px;
 }
 
 .add-button {
