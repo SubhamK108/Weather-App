@@ -9,7 +9,7 @@ const UpdateWeather = async (lat, long) => {
     var weatherLocation = document.querySelector(".locationName");
     var errorClass = document.querySelector(".error");
 
-    const API = 'TIVBOHDH8SQfkQWZt6W82MJeGIFTzMTT';
+    const API = 'xNPHc0AnK8aK5r0qM8S538WOjCfj8p3Q';
     const cityURL = `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API}&q=${lat},${long}&toplevel=false`;
 
     try {
@@ -49,7 +49,7 @@ const UpdateWeather = async (lat, long) => {
 // Function to get the weather details (JSON)
 const GetWeatherDetails = async (cityID) => {
 
-    const API = 'TIVBOHDH8SQfkQWZt6W82MJeGIFTzMTT';
+    const API = 'xNPHc0AnK8aK5r0qM8S538WOjCfj8p3Q';
     const weatherURL = `https://dataservice.accuweather.com/currentconditions/v1/${cityID}?apikey=${API}`;
     const weather = await fetch(weatherURL);
     const weatherJSON = await weather.json();
