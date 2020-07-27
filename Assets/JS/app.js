@@ -79,9 +79,9 @@ window.addEventListener("load", () => {
     
     if (navigator.geolocation) {
 
-        errorClass.textContent = 'Tracking your location';
-
         navigator.geolocation.getCurrentPosition(position => {
+
+            errorClass.textContent = 'Tracking your location';
 
             var long = position.coords.longitude;
             var lat = position.coords.latitude;
