@@ -15,12 +15,12 @@ const UpdateWeather = async (lat, long) => {
     try {
 
         // Get city data
-        const city = await fetch(cityURL);
-        const cityJSON = await city.json();
+        var city = await fetch(cityURL);
+        var cityJSON = await city.json();
         var cityID = cityJSON.Key;
 
         // Get weather data
-        const weatherJSON = await GetWeatherDetails(cityID);
+        var weatherJSON = await GetWeatherDetails(cityID);
         var iconID = weatherJSON.WeatherIcon;
 
         errorClass.remove();
