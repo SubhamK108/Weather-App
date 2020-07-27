@@ -2,8 +2,8 @@
 
 var ICONS = {
     1 : 'CLEAR_DAY',
-    2 : 'CLEAR_DAY',
-    3 : 'CLEAR_DAY',
+    2 : 'PARTLY_CLOUDY_DAY',
+    3 : 'PARTLY_CLOUDY_DAY',
     4 : 'PARTLY_CLOUDY_DAY',
     5 : 'PARTLY_CLOUDY_DAY',
     6 : 'CLOUDY',
@@ -30,7 +30,7 @@ var ICONS = {
     31 : 'CLOUDY',
     32 : 'WIND',
     33 : 'CLEAR_NIGHT',
-    34 : 'CLEAR_NIGHT',
+    34 : 'PARTLY_CLOUDY_NIGHT',
     35 : 'PARTLY_CLOUDY_NIGHT',
     36 : 'PARTLY_CLOUDY_NIGHT',
     37 : 'PARTLY_CLOUDY_NIGHT',
