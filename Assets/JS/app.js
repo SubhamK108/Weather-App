@@ -12,8 +12,6 @@ const UpdateWeather = async (lat, long) => {
     const API = 'Fs28Hm60apgMBe0wJMTPi7eFvg1jTeMH';
     const cityURL = `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API}&q=${lat},${long}&toplevel=false`;
 
-    errorClass.textContent = 'Fetching weather data';
-
     try {
 
         // Get city data
@@ -81,7 +79,7 @@ window.addEventListener("load", () => {
 
         navigator.geolocation.getCurrentPosition(position => {
 
-            errorClass.textContent = 'Tracking your location';
+            errorClass.textContent = 'Fetching weather data of your current location';
 
             var long = position.coords.longitude;
             var lat = position.coords.latitude;
