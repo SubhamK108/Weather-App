@@ -75,10 +75,14 @@ window.addEventListener("load", () => {
     var temperatureSection = document.querySelector(".tempDegreeSection");
     var temperatureDegree = document.querySelector(".tempDegree");
     var temperatureUnit = document.querySelector(".tempUnit");
+    var errorClass = document.querySelector(".error");
     
     if (navigator.geolocation) {
 
+        errorClass.textContent = 'Tracking your location';
+
         navigator.geolocation.getCurrentPosition(position => {
+
             var long = position.coords.longitude;
             var lat = position.coords.latitude;
             
